@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting DApp</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Header Section -->
+        <div id="header">
+            <img src="OIP.jpg" alt="Voting DApp Logo" class="logo"> <!-- Placeholder for logo -->
+            <h1>Welcome to Voting DApp</h1>
+        </div>
+
+        <!-- Connect Wallet Section -->
+        <div id="connect-section" class="box-shadow">
+            <button id="connectButton" class="btn-primary" onclick="connectWallet()">Connect MetaMask</button>
+        </div>
+
+        <!-- Registration Section -->
+        <div id="registration" class="box-shadow">
+            <h2>Register Voter</h2>
+            <input type="text" id="name" placeholder="Enter your name" class="input-field">
+            <button class="btn-primary" onclick="registerVoter()">Register</button>
+        </div>
+
+        <!-- Voting Section -->
+        <div id="voting" class="box-shadow" style="display:none;">
+            <h2>Vote</h2>
+            <input type="text" id="candidateId" placeholder="Enter Candidate ID" class="input-field">
+            <button class="btn-primary" onclick="castVote()">Vote</button>
+            <button class="btn-secondary" onclick="getVoteResults()">Get Vote Results</button>
+            <div id="resultsDisplay" class="results"></div>
+        </div>
+    </div>
+</body>
+</html>
